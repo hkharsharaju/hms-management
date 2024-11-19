@@ -26,7 +26,9 @@ SECRET_KEY = 'ypbx1fbodlc**t$*mh9z^kio17(l$7nvgm%2)fumex-%lemzsc'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://hms-project.onrender.com',  # Add this line
+]
 
 # Application definition
 
@@ -129,8 +131,9 @@ AUTH_USER_MODEL = 'hmsapp.User'
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/images/')
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "hraju0747@gmail.com"
-EMAIL_HOST_PASSWORD = "nhvba msga lbyn dodz"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_PORT=587
+EMAIL_HOST_USER='hraju0747@gmail.com'
+EMAIL_HOST_PASSWORD='bnwz kxnx gcuj lcca'
